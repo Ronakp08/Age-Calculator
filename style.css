@@ -54,6 +54,10 @@ body{
 }
 
 .calculate-btn {
-    height: 5vh;
+    height: 7vh;
     width: 100vh;
+    border: 1px solid white;
+    border-radius: 6px;
+    font-family: cursive;
+    font-size: 15px;
 }
