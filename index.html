@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="b-card">
+    <div class="h-class"><p class="heading">Age Calculator</p></div>
+    <div class="age-calc">
+      <div class="birth-date">
+        <label for="b-date">Birthdate: </label>
+        <input type="date" name="b-date" id="b-date" />
+      </div>
+      <div class="birth-date">
+        <label for="c-date">Current date: </label>
+        <input type="date" name="c-date" id="c-date" />
+      </div>
+
+      <p id="age"></p>
+
+      <button type="submit" class="calculate-btn" onclick="ageCalculator()">
+        Calculate
+      </button>
+    </div>
+</div>
+
+    <script>
+      function ageCalculator() {
+        let birthDate = document.getElementById("b-date").value;
+        let currentDate = document.getElementById("c-date").value;
+
+        if (!birthDate || !currentDate) {
+          alert("Please select both birthdate and current date !");
+          return;
+        }
+
+        let bDate = new Date(birthDate);
+        let cDate = new Date(currentDate);
+
+        let age = cDate.getFullYear() - bDate.getFullYear();
+        let month = cDate.getMonth() - bDate.getMonth();
+        let day = cDate.getDate() - bDate.getDate();
+
+        if (month < 0 || (month === 0 && day < 0)) {
+          age--;
+        }
+
+        if (month < 0) {
+          month += 12;
+        }
+
+        document.getElementById("age").innerText =
+          "Your age is: " +
+          age +
+          " years " +
+          month +
+          " months " +
+          day +
+          " days";
+      }
+    </script>
+  </body>
+</html>

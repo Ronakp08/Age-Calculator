@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.b-card {
+    height: 75vh;
+    width: 120vh;
+    justify-items: center;
+    background-color: rgba(108, 130, 226, 0.685);
+    margin-top: 10vh;
+    margin-left: 20%;
+}
+
+body{
+    background-color: rgba(5, 7, 6, 0.966);
+}
+
+.h-class {
+  height: 18vh;
+  width: 100%;
+  font-family: cursive;
+  font-size: 26px;
+  align-content: center;
+  text-align: center;
+  background: #000;
+  color: white;
+}
+
+.age-calc{
+    padding-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+.age-calc label{
+    font-family:fantasy;
+    letter-spacing: 2px;
+    font-size: 22px;
+}
+
+.age-calc input{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#age {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: rgb(116, 5, 5);
+}
+
+.calculate-btn {
+    height: 5vh;
+    width: 100vh;
+}
